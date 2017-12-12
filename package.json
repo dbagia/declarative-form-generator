@@ -1,0 +1,48 @@
+{
+  "name": "declarative-form-generator",
+  "version": "1.0.0",
+  "description": "A simple react form generator using functional programming concepts",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --hot --colors --open",
+    "build": "webpack",
+    "test": "standard && npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dbagia/declarative-form-generator.git"
+  },
+  "keywords": [
+    "declarative",
+    "react"
+  ],
+  "author": "Dipen Bagia (dipen.bagia@outlook.com)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/dbagia/declarative-form-generator/issues"
+  },
+  "homepage": "https://github.com/dbagia/declarative-form-generator#readme",
+  "dependencies": {
+    "basscss": "8.0.2",
+    "data.either": "1.5.1",
+    "data.maybe": "1.2.2",
+    "ramda": "0.21.0",
+    "react": "16.2.0",
+    "react-dom": "16.2.0",
+    "react-router-dom": "4.1.2"
+  },
+  "devDependencies": {
+    "babel-cli": "6.26.0",
+    "babel-core": "6.26.0",
+    "babel-env": "2.4.1",
+    "babel-loader": "^7.1.2",
+    "css-loader": "^0.28.7",
+    "jest": "21.2.1",
+    "mocha": "^4.0.1",
+    "mocha-loader": "^1.1.1",
+    "standard": "10.0.3",
+    "style-loader": "^0.19.0",
+    "webpack": "3.9.1",
+    "webpack-dev-server": "2.9.5"
+  }
+}

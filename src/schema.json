@@ -1,0 +1,19 @@
+[
+  {
+    "type": "string",
+    "label": "First Name",
+    "required": true,
+    "placeholder": "first name",
+    "defaultValue": "x",
+    "readOnly": false
+  },
+  {
+    "type": "list",
+    "lookupId": "id",
+    "lookupDisplay": "name",
+    "defaultValue": 2,
+    "readOnly": false,
+    "required": true,
+    "label": "City"
+  }
+]
