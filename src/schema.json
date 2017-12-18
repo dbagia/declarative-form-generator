@@ -5,15 +5,18 @@
     "required": true,
     "placeholder": "first name",
     "defaultValue": "x",
-    "readOnly": false
+    "readOnly": false,
+    "name": "fname"
   },
   {
     "type": "list",
     "lookupId": "id",
     "lookupDisplay": "name",
+    "class": "cities",
     "defaultValue": 2,
     "readOnly": false,
     "required": true,
-    "label": "City"
+    "label": "City",
+    "name": "city"
   }
 ]

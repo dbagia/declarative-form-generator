@@ -23,26 +23,23 @@
   },
   "homepage": "https://github.com/dbagia/declarative-form-generator#readme",
   "dependencies": {
-    "basscss": "8.0.2",
-    "data.either": "1.5.1",
-    "data.maybe": "1.2.2",
-    "ramda": "0.21.0",
+    "basscss": "8.0.3",
+    "folktale": "2.0.1",
+    "ramda": "0.24.0",
     "react": "16.2.0",
     "react-dom": "16.2.0",
-    "react-router-dom": "4.1.2"
+    "react-router-dom": "4.2.2"
   },
   "devDependencies": {
     "babel-cli": "6.26.0",
     "babel-core": "6.26.0",
     "babel-env": "2.4.1",
-    "babel-loader": "^7.1.2",
-    "css-loader": "^0.28.7",
+    "babel-loader": "7.1.2",
+    "css-loader": "0.28.7",
     "jest": "21.2.1",
-    "mocha": "^4.0.1",
-    "mocha-loader": "^1.1.1",
     "standard": "10.0.3",
-    "style-loader": "^0.19.0",
-    "webpack": "3.9.1",
-    "webpack-dev-server": "2.9.5"
+    "style-loader": "0.19.1",
+    "webpack": "3.10.0",
+    "webpack-dev-server": "2.9.7"
   }
 }

@@ -1,5 +1,4 @@
 import 'basscss/css/basscss.min.css'
-import R from 'ramda'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { HashRouter as Router } from 'react-router-dom'
