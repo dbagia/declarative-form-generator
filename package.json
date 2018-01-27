@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/dbagia/declarative-form-generator#readme",
   "dependencies": {
+    "axios": "0.17.1",
     "basscss": "8.0.3",
     "folktale": "2.0.1",
     "ramda": "0.24.0",

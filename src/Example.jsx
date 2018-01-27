@@ -1,16 +1,16 @@
-import {generateForm, fields} from './generator'
+import {generateForm, formData} from './generator'
 import schema from './schema.json'
 import React from 'react'
 
 class Example extends React.Component {
   alert () {
-    console.log('fields', fields)
+    console.log('formData', formData)
   }
   render () {
     return (
       <div>
         {generateForm(schema)}
-        <button onClick={this.alert}>Show fields</button>
+        <button onClick={this.alert}>Show formData</button>
       </div>
     )
   }

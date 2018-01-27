@@ -10,13 +10,23 @@
   },
   {
     "type": "list",
-    "lookupId": "id",
-    "lookupDisplay": "name",
-    "class": "cities",
+    "lookupId": "list_name",
+    "lookupDisplay": "display_name",
+    "lookupUrl": "https://api.nytimes.com/svc/books/v3/lists/names.json?api-key=<your api key>",
+    "class": "books",
     "defaultValue": 2,
     "readOnly": false,
     "required": true,
-    "label": "City",
-    "name": "city"
+    "label": "Book",
+    "name": "book"
+  },
+  {
+    "type": "string",
+    "label": "Last Name",
+    "required": true,
+    "placeholder": "last name",
+    "defaultValue": "x",
+    "readOnly": false,
+    "name": "lname"
   }
 ]
