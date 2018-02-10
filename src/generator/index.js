@@ -2,16 +2,11 @@ import 'basscss/css/basscss.min.css'
 import R from 'ramda'
 import React from 'react'
 import LookupComponent from './Lookup_Component.jsx'
-import Maybe from 'folktale/maybe'
+import { processInputs } from './processInputs'
 
 let formData = {}
 
-const schemaItemHas = (props, schemaItem) => {
-  const hasProp = R.has(R.__, schemaItem)
-
-  return R.contains(false, props.map(prop => hasProp(prop))) ? Maybe.Nothing() : Maybe.Just(schemaItem)
-}
-
+// addOnChange:: (Object) -> (JSON) -> []
 const addOnChange = R.curry((fields, schema) =>
 schema.map(field => {
   field.onChange = event => {
@@ -21,25 +16,17 @@ schema.map(field => {
   return field
 }))
 
+// inputs:: (JSON) -> []
 const inputs = schema =>
     schema
-    .map((s, i) =>
-      schemaItemHas(['label', 'readOnly', 'placeholder'], s)
-      .map(ms =>
-        ms.type === 'string'
-        ? <div className='my2' key={i}>
-          <label className='mr2'>{ms.label}</label>
-          <input type='text' required={ms.required} readOnly={ms.readOnly} placeholder={ms.placeholder} onChange={ms.onChange} />
-        </div>
-        : ms
-      )
-    )
+    .map(processInputs)
     .map(maybe =>
       maybe.getOrElse(
         <div className='my2'>This field is missing required properties</div>
       )
     )
 
+// lists:: (JSON) -> []
 const lists = schema =>
   schema
     .map((s, i) =>
@@ -54,6 +41,6 @@ const log = o => {
 }
 
 const filter = R.curry((type, schema) => schema.filter(s => s.type === type))
-const generateForm = R.pipe(addOnChange(formData), filter('string'), log, inputs)
+const generateForm = R.pipe(addOnChange(formData), log, inputs, lists)
 
 export {generateForm, formData, inputs, lists, addOnChange}

@@ -1,6 +1,6 @@
 var path = require('path')
 var webpack = require('webpack')
-
+var cities = require('./src/data/cities.json')
 module.exports = {
   entry: [
     'babel-polyfill',
@@ -14,7 +14,12 @@ module.exports = {
   devServer: {
     inline: true,
     port: 8080,
-    historyApiFallback: true
+    historyApiFallback: true,
+    before: function (app) {
+      app.get('/cities', function (req, res) {
+        res.send(cities)
+      })
+    }
   },
   module: {
     rules: [
