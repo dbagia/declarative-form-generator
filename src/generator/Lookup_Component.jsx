@@ -12,14 +12,22 @@ export default class LookupComponent extends React.Component {
   componentDidMount () {
     axios.get(this.props.field.lookupUrl)
     .then(response => {
-      const options = response.data.results.map((r, i) => {
-        return {
+      const options =
+      response.data
+      .map(r =>
+        ({
           value: r[this.props.field.lookupId],
           text: r[this.props.field.lookupDisplay]
-        }
-      })
+        })
+      )
+      .map((option, i) =>
+        <option key={i} value={option.value}>{option.text}</option>
+      )
+
       this.setState({
-        options: options.map((option, i) => <option key={i} value={option.value}>{option.text}</option>)
+        options:
+        [<option key={-1} value={0}>--Select--</option>]
+        .concat(options)
       })
     })
   }
@@ -27,8 +35,13 @@ export default class LookupComponent extends React.Component {
   render () {
     return (
       <div className='my2'>
-        <label className='mr2'>{this.props.field.label}</label>
-        <select required={this.props.field.required} readOnly={this.props.field.readOnly} onChange={this.props.field.onChange}>
+        <label className='mr2 mb2'>{this.props.field.label}</label>
+        <select
+          required={this.props.field.required}
+          readOnly={this.props.field.readOnly}
+          onChange={this.props.field.onChange}
+          className='mb2'
+        >
           {this.state.options}
         </select>
       </div>

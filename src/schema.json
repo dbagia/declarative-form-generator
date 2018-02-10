@@ -10,15 +10,15 @@
   },
   {
     "type": "list",
-    "lookupId": "list_name",
-    "lookupDisplay": "display_name",
-    "lookupUrl": "https://api.nytimes.com/svc/books/v3/lists/names.json?api-key=<your api key>",
-    "class": "books",
+    "lookupId": "id",
+    "lookupDisplay": "name",
+    "lookupUrl": "http://localhost:8080/cities",
     "defaultValue": 2,
     "readOnly": false,
     "required": true,
-    "label": "Book",
-    "name": "book"
+    "label": "City",
+    "name": "city",
+    "placeholder": "city"
   },
   {
     "type": "string",

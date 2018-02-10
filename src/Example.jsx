@@ -3,14 +3,14 @@ import schema from './schema.json'
 import React from 'react'
 
 class Example extends React.Component {
-  alert () {
+  log () {
     console.log('formData', formData)
   }
   render () {
     return (
       <div>
         {generateForm(schema)}
-        <button onClick={this.alert}>Show formData</button>
+        <button onClick={this.log}>Log Form Data in Console</button>
       </div>
     )
   }
