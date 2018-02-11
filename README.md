@@ -9,7 +9,7 @@ The form schema is a JSON structure, an array of objects, each representing an i
 
 The ```generator``` takes this JSON structure as an input and returns a list of React Components, each corresponding to the object in the JSON structure at that position.
 
-## The implementation
+## The Concept
 The ```generator``` has been built using a simple concept from Category Theory in order to render the form from an array of input fields. 
 
 Below is an example of schema.json:
@@ -21,7 +21,6 @@ Below is an example of schema.json:
     "label": "First Name",
     "required": true,
     "placeholder": "first name",
-    "defaultValue": "x",
     "readOnly": false,
     "name": "fname"
   },
@@ -49,6 +48,31 @@ Below is an example of schema.json:
 ]
 ```
 
+The responsibility of the ```generator``` is to transform the above JSON schema into an array of ```React``` components like so:
+
+```
+[
+  <div>
+    <label>First Name</label>
+    <input
+      type='text'
+      required=true
+      placeholder='first name'
+      readOnly=false
+      name='fname'
+      onChange=<onChange Handler inserted by the generator>
+      />
+  </div>,
+  ...
+]
+```
+The process of this transformation has been developed using ```composition```, ```currying``` and ```Maybe Monad```
+
+## A bit of Category Theory
+
+This section explains the above transformation process using diagrams. 
+
+![alt text](/generator1.PNG)
 
 ## To-do
 
