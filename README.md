@@ -72,7 +72,7 @@ The process of this transformation has been developed using ```composition```, `
 
 This section explains the above transformation process using diagrams. 
 
-![alt text](/generator1.PNG)
+![A map from JSON to React Elements](/generator1.PNG)
 
 ## To-do
 
