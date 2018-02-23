@@ -44,6 +44,8 @@ const log = o => {
 // filter:: (String) -> (JSON) -> []
 const filter = R.curry((type, schema) => schema.filter(s => s.type === type))
 
-const generateForm = R.pipe(addOnChange(formData), log, inputs, lists)
+const isReact = schema => schema.filter(R.has('$$typeof'))
+
+const generateForm = R.pipe(addOnChange(formData), log, inputs, lists, isReact)
 
 export {generateForm, formData, inputs, lists, addOnChange}
