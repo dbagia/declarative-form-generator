@@ -4,7 +4,7 @@
   "description": "A simple react form generator using functional programming concepts",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --hot --colors --open",
+    "start": "webpack-dev-server --hot --colors",
     "build": "webpack",
     "test": "standard && npm test"
   },
@@ -25,6 +25,7 @@
   "dependencies": {
     "axios": "0.17.1",
     "basscss": "8.0.3",
+    "crocks": "0.8.4",
     "folktale": "2.0.1",
     "ramda": "0.24.0",
     "react": "16.2.0",
