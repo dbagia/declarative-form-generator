@@ -1,19 +1,8 @@
-import curry from 'crocks/helpers/curry'
 import schema from './schema.json'
 import List from 'crocks/List'
-
 import when from 'crocks/logic/when'
-import propOr from 'crocks/helpers/propOr'
-
+import {isSchemaItemOfType} from './generator/helpers'
 import { listToReact, textToReact } from './transformers'
-
-// defaultProp:: String -> (String -> String)
-const defaultProp = propOr('string')
-
-// isSchemaItemOfType:: String -> a -> Boolean
-const isSchemaItemOfType =
-  curry((type, schemaItem) =>
-    defaultProp('type', schemaItem) === type)
 
 // textInputs:: (Pred -> ())
 const textInputs =
