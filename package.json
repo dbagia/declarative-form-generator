@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --hot --colors",
     "build": "webpack",
-    "test": "standard && npm test"
+    "test": "standard && jest"
   },
   "repository": {
     "type": "git",
@@ -36,8 +36,10 @@
     "babel-core": "6.26.0",
     "babel-env": "2.4.1",
     "babel-loader": "7.1.2",
+    "babel-jest": "22.4.1",
     "css-loader": "0.28.7",
     "jest": "21.2.1",
+    "react-test-renderer": "16.2.0",
     "standard": "10.0.3",
     "style-loader": "0.19.1",
     "webpack": "3.10.0",
