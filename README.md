@@ -17,7 +17,7 @@ Below is an example of form schema:
 ```
 [
   {
-    "type": "string",
+    "type": "text",
     "label": "First Name",
     "required": true,
     "placeholder": "first name",
@@ -37,7 +37,7 @@ Below is an example of form schema:
     "placeholder": "city"
   },
   {
-    "type": "string",
+    "type": "text",
     "label": "Last Name",
     "required": true,
     "placeholder": "last name",
@@ -66,7 +66,7 @@ The responsibility of the ```generator``` is to transform the above form schema 
   ...
 ]
 ```
-The process of this transformation has been developed using ```composition```, ```currying``` and ```Maybe Monad```.
+The process of this transformation has been developed using ```composition```, ```currying``` and ```Monads``` by using [Crocks Library](https://github.com/evilsoft/crocks).
 
 ## A bit of Category Theory
 
