@@ -1,6 +1,6 @@
 [
   {
-    "type": "string",
+    "type": "text",
     "label": "First Name",
     "required": true,
     "placeholder": "first name",
@@ -21,7 +21,7 @@
     "placeholder": "city"
   },
   {
-    "type": "string",
+    "type": "text",
     "label": "Last Name",
     "required": true,
     "placeholder": "last name",

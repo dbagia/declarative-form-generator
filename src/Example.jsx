@@ -6,7 +6,7 @@ import { listToReact, textToReact } from './transformers'
 
 // textInputs:: (Pred -> ())
 const textInputs =
-  when(isSchemaItemOfType('string'), textToReact)
+  when(isSchemaItemOfType('text'), textToReact)
 
 // lists:: (Pred -> ())
 const lists =
