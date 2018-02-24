@@ -1,19 +1,32 @@
-import {generateForm, formData} from './generator'
+import curry from 'crocks/helpers/curry'
 import schema from './schema.json'
-import React from 'react'
+import List from 'crocks/List'
 
-class Example extends React.Component {
-  log () {
-    console.log('formData', formData)
-  }
-  render () {
-    return (
-      <div>
-        {generateForm(schema)}
-        <button onClick={this.log}>Log Form Data in Console</button>
-      </div>
-    )
-  }
-}
+import when from 'crocks/logic/when'
+import propOr from 'crocks/helpers/propOr'
+
+import { listToReact, textToReact } from './transformers'
+
+// defaultProp:: String -> (String -> String)
+const defaultProp = propOr('string')
+
+// isSchemaItemOfType:: String -> a -> Boolean
+const isSchemaItemOfType =
+  curry((type, schemaItem) =>
+    defaultProp('type', schemaItem) === type)
+
+// textInputs:: (Pred -> ())
+const textInputs =
+  when(isSchemaItemOfType('string'), textToReact)
+
+// lists:: (Pred -> ())
+const lists =
+  when(isSchemaItemOfType('list'), listToReact)
+
+const Example =
+  List
+  .fromArray(schema)
+  .map(textInputs)
+  .map(lists)
 
 export default Example

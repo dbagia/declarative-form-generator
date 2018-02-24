@@ -1,5 +1,14 @@
 import React from 'react'
-import axios from 'axios'
+import {asyncAxiosGet} from './helpers'
+
+const getData = url =>
+asyncAxiosGet(url)
+
+const toOptions = options =>
+  options
+  .map((option, i) =>
+    <option key={i} value={option.id}>{option.name}</option>
+  )
 
 export default class LookupComponent extends React.Component {
   constructor (props) {
@@ -10,26 +19,17 @@ export default class LookupComponent extends React.Component {
   }
 
   componentDidMount () {
-    axios.get(this.props.field.lookupUrl)
-    .then(response => {
-      const options =
-      response.data
-      .map(r =>
-        ({
-          value: r[this.props.field.lookupId],
-          text: r[this.props.field.lookupDisplay]
-        })
-      )
-      .map((option, i) =>
-        <option key={i} value={option.value}>{option.text}</option>
-      )
-
-      this.setState({
-        options:
-        [<option key={-1} value={0}>--Select--</option>]
-        .concat(options)
-      })
-    })
+    getData(this.props.field.lookupUrl)
+    .map(r => r.data)
+    .map(toOptions)
+    .fork(
+      err => console.log('err', err),
+      options => {
+        this.setState(
+          {options}
+        )
+      }
+    )
   }
 
   render () {

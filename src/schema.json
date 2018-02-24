@@ -28,5 +28,13 @@
     "defaultValue": "x",
     "readOnly": false,
     "name": "lname"
+  },
+  {
+    "label": "Country",
+    "required": true,
+    "placeholder": "Country",
+    "defaultValue": "x",
+    "readOnly": false,
+    "name": "country"
   }
 ]
