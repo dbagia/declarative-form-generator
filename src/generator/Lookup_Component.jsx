@@ -1,14 +1,5 @@
 import React from 'react'
-import {asyncAxiosGet} from './helpers'
-
-const getData = url =>
-asyncAxiosGet(url)
-
-const toOptions = options =>
-  options
-  .map((option, i) =>
-    <option key={i} value={option.id}>{option.name}</option>
-  )
+import {getData, toOptions} from './helpers'
 
 export default class LookupComponent extends React.Component {
   constructor (props) {
@@ -33,13 +24,16 @@ export default class LookupComponent extends React.Component {
   }
 
   render () {
+    const {field} = this.props
     return (
       <div className='my2'>
-        <label className='mr2 mb2'>{this.props.field.label}</label>
+        <label className='mr2 mb2'>
+          {field.label}
+        </label>
         <select
-          required={this.props.field.required}
-          readOnly={this.props.field.readOnly}
-          onChange={this.props.field.onChange}
+          required={field.required}
+          readOnly={field.readOnly}
+          onChange={field.onChange}
           className='mb2'
         >
           {this.state.options}
