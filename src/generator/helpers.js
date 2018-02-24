@@ -1,8 +1,5 @@
-import R from 'ramda'
-import Maybe from 'folktale/maybe'
+import {fromPromise} from 'crocks/Async'
+import axios from 'axios'
 
-export const schemaItemHas = (props, schemaItem) => {
-  const hasProp = R.has(R.__, schemaItem)
-
-  return R.contains(false, props.map(prop => hasProp(prop))) ? Maybe.Nothing() : Maybe.Just(schemaItem)
-}
+export const asyncAxiosGet =
+  fromPromise(axios.get)
