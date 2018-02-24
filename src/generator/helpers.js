@@ -5,7 +5,7 @@ import IO from 'crocks/IO'
 import propOr from 'crocks/helpers/propOr'
 
 // defaultProp:: String -> (String -> String)
-const defaultProp = propOr('string')
+const defaultProp = propOr('text')
 
 export const asyncAxiosGet =
   fromPromise(axios.get)
