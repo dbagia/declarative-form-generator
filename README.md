@@ -124,6 +124,31 @@ The laws of Category Theory allow us to combine more than one maps through ```co
 
 The above diagram is the same as we started with: (map *```f```* ).
 
+## Thinking Declaratively
+
+I have spent a lot of time trying to figure this out. The most useful resource I have found so far is Kevlin Henney's [talk](https://www.youtube.com/watch?v=NSzsYWckGd4) on declarative thinking.
+
+In a declarative/functional paradigm, you tell the computer what you need rather than how you want the computer to get it. The "how" part is left for the computer to decide. 
+
+But how can we actually describe the "what" part in programming? 
+
+**Describe the properties of the domain/problem**
+
+For instance, consider the problem of [balanced brackets](https://www.hackerrank.com/challenges/balanced-brackets/problem). One of the imperative ways of solving this problem is using Stack Data Structure. 
+
+Using the declarative approach, the properties of this problem are as below:
+
+1. The input is a string of variable length and only allows {, [, (, }, ] and )
+
+2. If the input length is odd, it is unbalanced (it is just not possible to have balanced brackets with odd number of characters)
+
+3. If the input length is even, then for every opening brace of type (, { or ] there is an equivalent closing brace at a distance double the length of other opening braces after the current opening brace
+
+You can have a look at the declarative solution [here](https://github.com/dbagia/declarative-demos/tree/master/demos/balanced-brackets)
+
+## Container Style Programming
+### ...
+
 ## References
 
 * [Prof Frisby's Mostly Adequate Guide to Functional Programming](https://drboolean.gitbooks.io/mostly-adequate-guide/)
