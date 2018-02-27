@@ -153,4 +153,4 @@ You can have a look at the declarative solution [here](https://github.com/dbagia
 
 * [Prof Frisby's Mostly Adequate Guide to Functional Programming](https://drboolean.gitbooks.io/mostly-adequate-guide/)
 * [Declarative Thinking](https://www.youtube.com/watch?v=NSzsYWckGd4)
-* [Crocks Libray](https://evilsoft.github.io/crocks/docs/crocks/)
+* [Crocks Library](https://evilsoft.github.io/crocks/docs/crocks/)
