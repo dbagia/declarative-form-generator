@@ -4,9 +4,11 @@ An explanation of how it works is being drafted!
 
 ## How to run
 
-1. `git clone https://github.com/dbagia/declarative-demos.git`
+1. `git clone https://github.com/dbagia/declarative-form-generator.git`
 2. `npm install`
-3. `http://localhost:8080`
+3. `Go to http://localhost:8080`
+
+You should see a form rendered in the browser with some fields. Keying in any text or changing the drop-down value should log the entered data in the console. 
 
 ## How does it work?
 The core idea behind the form generator is to use a schema to render form in the UI. 
