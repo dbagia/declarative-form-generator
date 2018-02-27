@@ -28,3 +28,9 @@ export const $ = selector =>
 export const isSchemaItemOfType =
   curry((type, schemaItem) =>
     defaultProp('type', schemaItem) === type)
+
+// unsafe log:: a -> a
+export const log = o => {
+  console.log(o)
+  return o
+}
