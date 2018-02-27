@@ -13,11 +13,11 @@ const textInputs =
 const lists =
   when(isSchemaItemOfType('list'), listToReact)
 
-const generator = compose(lists, textInputs)
+const transform = compose(lists, textInputs)
 
 const Example =
   List
   .fromArray(schema)
-  .map(generator)
+  .map(transform)
 
 export default Example
