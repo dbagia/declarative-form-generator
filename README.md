@@ -144,7 +144,7 @@ Using the declarative approach, the properties of this problem are as below:
 
 2. If the input length is odd, it is unbalanced (it is just not possible to have balanced brackets with odd number of characters)
 
-3. If the input length is even, then for every opening brace of type (, { or ] there is an equivalent closing brace at a distance double the length of other opening braces after the current opening brace
+3. If the input length is even, then for every opening brace of type (, { or [ there is an equivalent closing brace at a distance double the length of other opening braces after the current opening brace
 
 You can have a look at the declarative solution [here](https://github.com/dbagia/declarative-demos/tree/master/demos/balanced-brackets)
 
