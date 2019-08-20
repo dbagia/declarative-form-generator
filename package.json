@@ -28,7 +28,7 @@
     "crocks": "0.8.4",
     "ramda": "0.24.0",
     "react": "16.2.0",
-    "react-dom": "16.2.0",
+    "react-dom": "16.2.1",
     "react-router-dom": "4.2.2"
   },
   "devDependencies": {
