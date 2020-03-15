@@ -1,4 +1,5 @@
-import {fromPromise} from 'crocks/Async'
+import React from 'react'
+import { fromPromise } from 'crocks/Async'
 import axios from 'axios'
 import curry from 'crocks/helpers/curry'
 import IO from 'crocks/IO'
@@ -17,9 +18,9 @@ export const getData =
 // toOptions:: [a] -> jsx
 export const toOptions = options =>
   options
-  .map((option, i) =>
-    <option key={i} value={option.id}>{option.name}</option>
-  )
+    .map((option, i) =>
+      <option key={i} value={option.id}>{option.name}</option>
+    )
 
 export const $ = selector =>
   IO.of(document.querySelectorAll(selector))

@@ -1,6 +1,7 @@
-import LookupComponent from './generator/Lookup_Component.jsx'
-import assign from 'crocks/helpers/assign'
+import React from 'react'
 import curry from 'crocks/helpers/curry'
+import assign from 'crocks/helpers/assign'
+import LookupComponent from './generator/Lookup_Component.jsx'
 
 export const textToReact = item =>
   <div className='my2'>

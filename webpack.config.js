@@ -2,10 +2,7 @@ var path = require('path')
 var webpack = require('webpack')
 var cities = require('./src/data/cities.json')
 module.exports = {
-  entry: [
-    'babel-polyfill',
-    './src'
-  ],
+  entry: './src',
   output: {
     filename: 'bundle.js',
     path: path.join(__dirname, '/')
@@ -24,11 +21,6 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /[*]\.test\.js$/,
-        use: 'mocha-loader',
-        exclude: /node_modules/
-      },
-      {
         test: /\.css$/,
         use: ['style-loader', 'css-loader']
       },
@@ -38,7 +30,7 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['env']
+            presets: []
           }
         }
       }
