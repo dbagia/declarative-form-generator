@@ -6,7 +6,8 @@ An explanation of how it works is being drafted!
 
 1. `git clone https://github.com/dbagia/declarative-form-generator.git`
 2. `yarn`
-3. `Go to http://localhost:8080`
+3. `yarn start`
+4. `Go to http://localhost:8080`
 
 You should see a form rendered in the browser with some fields. Keying in any text or changing the drop-down value should log the entered data in the console. 
 
